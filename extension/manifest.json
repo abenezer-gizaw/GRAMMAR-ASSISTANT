@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Grammar Assistant",
+  "version": "1.0",
+
+  "permissions": ["sidePanel"],
+
+  "host_permissions": [
+    "http://localhost:8000/*"
+  ],
+
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+
+  "action": {
+    "default_title": "Grammar Assistant"
+  }
+}
