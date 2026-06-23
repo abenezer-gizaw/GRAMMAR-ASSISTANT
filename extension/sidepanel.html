@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="sidepanel.css">
+    <title>Grammar Assistant</title>
+    <link rel="stylesheet" href="sidepanel.css">
 </head>
-
 <body>
 
-<h2>Grammar Assistant</h2>
+    <h2>Grammar Assistant</h2>
 
-<textarea id="input" placeholder="Paste text here"></textarea>
+    <textarea
+        id="input"
+        placeholder="Enter text..."
+    ></textarea>
 
-<div class="buttons">
-  <button onclick="generate('casual')">Casual</button>
-  <button onclick="generate('formal')">Formal</button>
-  <button onclick="generate(lastTone)">Regenerate</button>
-</div>
+    <br>
 
-<textarea id="output" placeholder="Result"></textarea>
+    <button id="formal">Formal</button>
+    <button id="casual">Casual</button>
 
-<button id="copy">Copy</button>
+    <br><br>
 
-<script src="sidepanel.js"></script>
+    <textarea
+        id="output"
+        placeholder="Result..."
+    ></textarea>
+
+    <br>
+
+    <button id="copy">Copy</button>
+
+    <script src="sidepanel.js"></script>
 
 </body>
 </html>

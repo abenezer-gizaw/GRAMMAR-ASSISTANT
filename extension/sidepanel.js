@@ -1,26 +1,48 @@
-let lastTone = "formal";
+const input = document.getElementById("input");
+const output = document.getElementById("output");
 
 async function generate(tone) {
-  lastTone = tone;
 
-  const input = document.getElementById("input").value;
+    const response = await fetch(
+        "http://127.0.0.1:8000/grammar_fix",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                text: input.value,
+                tone: tone
+            })
+        }
+    );
 
-  const res = await fetch("http://127.0.0.1:8000/grammar", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      text: input,
-      tone: tone
-    })
-  });
+    const data = await response.json();
 
-  const data = await res.json();
-  document.getElementById("output").value = data.result;
+    output.value = data.result;
 }
 
-document.getElementById("copy").addEventListener("click", () => {
-  const text = document.getElementById("output").value;
-  navigator.clipboard.writeText(text);
-});
+document
+    .getElementById("formal")
+    .addEventListener(
+        "click",
+        () => generate("formal")
+    );
+
+document
+    .getElementById("casual")
+    .addEventListener(
+        "click",
+        () => generate("casual")
+    );
+
+document
+    .getElementById("copy")
+    .addEventListener(
+        "click",
+        () => {
+            navigator.clipboard.writeText(
+                output.value
+            );
+        }
+    );
