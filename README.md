@@ -27,12 +27,25 @@ After that, I can copy the result and paste it back into Slack, Outlook, or wher
 ## Why I built it
 
 I wanted a faster way to fix grammar while working in apps like Slack and Outlook.  
-Instead of going back and forth to ChatGPT, Gemini I wanted a small writing assistant that stays inside the browser.
+Instead of going back and forth to AI, typing my promt each time, I wanted a small writing assistant that stays inside the browser.
 
 This is the first version of the project.  
 Right now the user still has to copy and paste text into the extension, but later I want to improve it so it can read text directly from the page and maybe even replace it automatically.
 
 ---
+## What I Learned
+
+- **Chrome Extension Development** - Manifest V3, service workers, side panels, and content scripts
+- **Cross-Origin Communication** - messaging between extension and backend API
+- **API Integration** - Working with third-party APIs (Gemini) and handling authentication
+- **Environment Variables & Secrets Management** - Safely storing API keys
+- **FastAPI Backend Design** - Building endpoints to support frontend features
+- **CORS & Browser Security** - Understanding browser security policies and proper configuration
+- **User Experience (UX)** - Designing intuitive interfaces for productivity tools
+- **Asynchronous Programming** - Handling async API calls and loading states
+- **State Management** - Managing user input and API responses in the extension
+- **Problem-Solving Mindset** - Identifying real workflow problems and building practical solutions
+
 
 ## Tech Stack
 
