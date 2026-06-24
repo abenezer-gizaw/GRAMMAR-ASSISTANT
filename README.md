@@ -19,6 +19,7 @@ After that, I can copy the result and paste it back into Slack, Outlook, or wher
 - Has tone options:
   - Formal
   - Casual
+  - Regenerate by clicking again
 - Lets the user copy the generated result
 
 ---
